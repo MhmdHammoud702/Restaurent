@@ -2,11 +2,11 @@ import React from 'react'
 import logo from '../../logo.png'
 import { FaCcVisa,FaCcMastercard,FaCcPaypal,FaCcAmex,FaCcDiscover } from 'react-icons/fa';
 import { FaFacebookF,FaInstagram,FaTwitter,FaGoogle } from 'react-icons/fa';
-
+import {motion} from "framer-motion";
 const Footer = () => {
   return (
     <div className='bg-[var(--lightYellow)] px-25 py-10'>
-  <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+  <motion.div initial={{opacity: 0,y:-100}} whileInView={{opacity:1,y:0}} transition={{type:"spring",stiffness: 100,damping: 10,delay:0.6}} className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
     
     {/* description */}
     <div className='flex flex-col justify-center items-center space-y-5 text-center'>
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
     </div>
 
-  </div>
+  </motion.div>
 </div>
 
   )
