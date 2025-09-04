@@ -1,0 +1,30 @@
+/* index.css (or App.css) */
+@import "tailwindcss";
+
+
+
+
+/* Your custom variables and classes come after Tailwind imports */
+:root {
+  --lightYellow: #f6d876;
+  --white2: #fffbf2;
+  --darkGreen: #05ab54;
+  --dark: #1e1e1e;
+}
+
+.league {
+   font-family:'League Gothic';
+}
+
+
+.text-outline {
+  -webkit-text-stroke: 2px rgb(0, 0, 0); /* thickness + color */
+}
+
+.img-shadow{
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+}
+
+.box-shadow{
+  box-shadow: 0px 5px  15px rgb(193, 193, 193);
+}
