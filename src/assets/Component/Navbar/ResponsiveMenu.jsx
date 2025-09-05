@@ -1,34 +1,39 @@
 import React, { useEffect, useRef } from "react";
 
-export const ResponsiveMenu = ({ Menu, showMenu }) => {
+export const ResponsiveMenu = ({ Menu, showMenu, buttonRef }) => {
   const menuRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        showMenu(false); // hide menu
+      // Ignore clicks/taps on the button
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        showMenu(false); // only close if click is outside both menu and button
       }
     };
 
     if (Menu) {
       document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, [Menu, showMenu]);
+  }, [Menu, showMenu, buttonRef]);
 
   return (
     <div
       className={`${
         Menu ? "top-28 opacity-100 py-0" : "top-[-100%] opacity-0"
-      } fixed top-0 w-full h-auto z-40 bg-white/40 backdrop-blur-md  transition-all duration-500`}
+      } fixed top-0 w-full h-auto z-40 bg-white/40 backdrop-blur-md transition-all duration-500`}
     >
-      <nav
-        ref={menuRef}
-        className="w-80 mx-auto mt-0 p-5 rounded-lg"
-      >
+      <nav ref={menuRef} className="w-80 mx-auto mt-0 p-5 rounded-lg">
         <ul className="flex flex-col space-y-4 text-[2rem] league text-center">
           <li>Home</li>
           <li>About</li>
