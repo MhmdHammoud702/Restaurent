@@ -67,7 +67,7 @@ const Products = () => {
                  <motion.div initial={{opacity: 0,x:-100}} whileInView={{opacity:1,x:0}} transition={{type:"spring",stiffness: 100,damping: 10,delay:0.2}} className="bg-white flex flex-col items-center rounded-2xl h-full w-full max-w-[300px] space-x-0 group box-shadow">
                     <img src={peperoni}  className="w-[300px] h-[300px] object-cover scale-[0.7] transition-transform group group-hover:-translate-y-20 group-hover:translate-x-20 group-hover:rotate-50 hover:scale-[0.9] img-shadow"/>
                     <div className="text-2xl h-full text-center">
-                    <button className='bg-[var(--darkGreen)] block lg:hidden ml-5 text-sm px-6 py-2 mb-4 cursor-pointer group-hover:block rounded-full font-bold text-white '>Order Now</button>
+                    <button className='bg-[var(--darkGreen)] hidden ml-5 text-sm px-6 py-2 mb-4 cursor-pointer group-hover:block rounded-full font-bold text-white '>Order Now</button>
                     <h1>Pizza Peperoni</h1>
                     <p className='text-orange-400 pb-10'>$5.99</p>
                    </div>
@@ -76,7 +76,7 @@ const Products = () => {
                 <motion.div initial={{opacity: 0,x:-100}} whileInView={{opacity:1,x:0}} transition={{type:"spring",stiffness: 100,damping: 10,delay:0.3}} className="bg-white flex flex-col items-center rounded-2xl h-full w-full max-w-[300px] space-x-0 group box-shadow">
                      <img src={chicken2} className="w-[300px] h-[300px] object-cover scale-[0.8] transition-transform group group-hover:-translate-y-20 group-hover:translate-x-20 group-hover:rotate-50 hover:scale-[1] img-shadow" alt="" />
                      <div className="text-2xl h-full text-center">
-                     <button className='bg-[var(--darkGreen)] block lg:hidden ml-3 text-sm px-6 py-2 mb-4 group-hover:block cursor-pointer rounded-full font-bold text-white '>Order Now</button>
+                     <button className='bg-[var(--darkGreen)] hidden ml-3 text-sm px-6 py-2 mb-4 group-hover:block cursor-pointer rounded-full font-bold text-white '>Order Now</button>
                      <h1>Chicken Plate</h1>
                      <p className='text-orange-400 pb-10'>$5.00</p>
                      </div>
@@ -85,7 +85,7 @@ const Products = () => {
                  <motion.div initial={{opacity: 0,x:-100}} whileInView={{opacity:1,x:0}} transition={{type:"spring",stiffness: 100,damping: 10,delay:0.4}} className="bg-white flex flex-col items-center rounded-2xl h-full w-full max-w-[300px] space-x-0 space-y- group box-shadow">
                      <img src={rice} className={`w-[300px] h-[300px] object-cover scale-[0.8] transition-transform group group-hover:-translate-y-20 group-hover:translate-x-20 group-hover:rotate-50 hover:scale-[1] img-shadow`} alt="" />
                       <div className=" text-2xl h-full text-center ">
-                      <button className=' bg-[var(--darkGreen)] block lg:hidden ml-16 text-sm px-6 py-2 mb-4 group-hover:block cursor-pointer rounded-full font-bold text-white '>Order Now</button>
+                      <button className=' bg-[var(--darkGreen)] hidden ml-16 text-sm px-6 py-2 mb-4 group-hover:block cursor-pointer rounded-full font-bold text-white '>Order Now</button>
                       <h1 className=''>Rice And Chicken Plate</h1>
                       <p className='text-orange-400 pb-10'>$5.00</p>
                      </div>
