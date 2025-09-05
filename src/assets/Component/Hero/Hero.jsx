@@ -36,7 +36,7 @@ const Hero = () => {
           {/* text content */}
           <div className='space-y-3 mt-14 mb-10 text-center md:text-left md:mt-0 md:pl-20'>
             <div className='flex flex-row justify-center md:justify-start mb-0'>
-              <motion.h1 variants={slideUp(0.5)} initial="initial" whileInView="animate" className='text-5xl lg:text-7xl xl:text-8xl font-bold uppercase text-transparent text-outline '>
+              <motion.h1 variants={slideUp(0.5)} initial="initial" whileInView="animate" className='text-5xl lg:text-7xl xl:text-8xl font-bold uppercase text-[var(--white2)] text-outline '>
               Yummy</motion.h1>
               <motion.img variants={slideUp(1)} initial="initial" whileInView="animate" src={leafs} alt="" className='lg:w-[80px] md:w-[40px] w-[40px] top-2 right-10 md:right-[150px] md:top-3' />
             </div> 
